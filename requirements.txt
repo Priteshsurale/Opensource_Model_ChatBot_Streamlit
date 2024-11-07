@@ -17,3 +17,6 @@ langserve
 fastapi
 uvicorn
 sse_starlette
+wikipedia
+arxiv
+duckduckgo-search
