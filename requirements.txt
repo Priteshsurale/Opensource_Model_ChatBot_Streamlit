@@ -20,3 +20,7 @@ sse_starlette
 wikipedia
 arxiv
 duckduckgo-search
+youtube-transcript-api
+validators
+unstructured
+pytube
