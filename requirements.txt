@@ -24,3 +24,4 @@ youtube-transcript-api
 validators
 unstructured
 pytube
+numexpr
