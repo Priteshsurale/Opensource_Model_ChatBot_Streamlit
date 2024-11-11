@@ -25,3 +25,5 @@ validators
 unstructured
 pytube
 numexpr
+huggingface_hub
+langchain-core
