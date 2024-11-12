@@ -9,6 +9,8 @@ import tempfile
 from gtts import gTTS
 import io
 from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+load_dotenv()
 
 st.set_page_config(page_title="Llamma Voice & Chat Bot", page_icon="🦙")
 st.title("Llamma Voice & Chat Bot 🦙")
@@ -33,7 +35,7 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-chain = prompt | ChatGroq(model=llm_selector(), api_key='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')  #Ollama( model=llm_selector(), temperature=0)
+chain = prompt | ChatGroq(model=llm_selector(), api_key=os.getenv('GROQ_API_KEY'))  #Ollama( model=llm_selector(), temperature=0)
 chain_with_history = RunnableWithMessageHistory(
     chain,
     lambda session_id: msgs,
